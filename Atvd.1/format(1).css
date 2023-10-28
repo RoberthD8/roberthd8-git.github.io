@@ -1,0 +1,72 @@
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hoverouver {
+  color: red;
+}
+/* Estilos para o formulário de cadastro */
+form {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    <style>
+    .required::after{
+        content:" *"
+        color: red
+      }
+    </style>
+}
+.campo-obrigatorio{
+Color:red;
+font-size: 18;
+margin-left: 5;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para rótulos e campos de entrada */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+/* Estilos para o botão de envio */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
