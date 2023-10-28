@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+    <title>Conversor de Moedas</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Moedas</h1>
+        <label for="moeda">Selecione a moeda:</label>
+        <select id="moeda">
+            <option value="dolar">Dólar (USD)</option>
+            <option value="euro">Euro (EUR)</option>
+        </select>
+        <br>
+        <label for="valor">Digite o valor:</label>
+        <input type="number" id="valor" placeholder="Digite o valor aqui">
+        <br>
+        <button onclick="converterMoeda()">Calcular</button>
+        <br>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function converterMoeda() {
+            const moeda = document.getElementById("moeda").value;
+            const valor = parseFloat(document.getElementById("valor").value);
+            let taxaDeCambio;
+            
+            if (moeda === "dolar") {
+                taxaDeCambio = 4.93;
+            } else if (moeda === "euro") {
+                taxaDeCambio = 5.26;
+            }
+            
+            const resultadoEmReais = (valor * taxaDeCambio).toFixed(2);
+            document.getElementById("resultado").innerHTML = `Valor em Reais (BRL): R$ ${resultadoEmReais}`;
+        }
+    </script>
+</body>
+</html>
